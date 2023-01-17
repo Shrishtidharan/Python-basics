@@ -1,14 +1,13 @@
-def isPrime(x):
-    flag = True
-    for a in range(2,x//2 + 1):
-        if x % a == 0:
-            flag = False
-            break
-    return flag
-arr = [2,4,5,7,8]
-sum = 0
-for qq in arr:
-    if isPrime(qq):
-        print(qq,end="  ")
-        sum += qq
-print("Sum of prime number is - ",sum)
+def isPrime(num):
+    for x in range(2,num//2+1):
+        if num%x==0:
+            return False
+    return True
+sumn=0
+numlis=list(map(int,input().split()))
+for vl in numlis:
+    if isPrime(vl) and vl!=1 and vl!=0:
+        print("The prime numbers are -" ,vl)
+        sumn+=vl
+print(sumn)
+    
